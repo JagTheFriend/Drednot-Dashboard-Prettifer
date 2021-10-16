@@ -25,7 +25,7 @@ function createWindow(): void {
     mainWindow.on("ready-to-show", () => mainWindow.show());
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
