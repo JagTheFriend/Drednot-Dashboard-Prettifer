@@ -1,0 +1,66 @@
+{
+    "name": "test-2",
+    "productName": "test-2",
+    "version": "1.0.0",
+    "description": "My Electron application description",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "tsc && electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish",
+        "lint": "eslint --ext .ts .",
+        "dev": "concurrently \"tsc -w\" \"electron-forge start\""
+    },
+    "keywords": [],
+    "author": {
+        "name": "JagTheFriend",
+        "email": "jagthefriend12@gmail.com"
+    },
+    "license": "MIT",
+    "config": {
+        "forge": {
+            "packagerConfig": {},
+            "makers": [
+                {
+                    "name": "@electron-forge/maker-squirrel",
+                    "config": {
+                        "name": "test_2"
+                    }
+                },
+                {
+                    "name": "@electron-forge/maker-zip",
+                    "platforms": [
+                        "darwin"
+                    ]
+                },
+                {
+                    "name": "@electron-forge/maker-deb",
+                    "config": {}
+                },
+                {
+                    "name": "@electron-forge/maker-rpm",
+                    "config": {}
+                }
+            ]
+        }
+    },
+    "devDependencies": {
+        "@electron-forge/cli": "^6.0.0-beta.61",
+        "@electron-forge/maker-deb": "^6.0.0-beta.61",
+        "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+        "@electron-forge/maker-zip": "^6.0.0-beta.61",
+        "@typescript-eslint/eslint-plugin": "^4.33.0",
+        "@typescript-eslint/parser": "^4.33.0",
+        "electron": "15.1.2",
+        "eslint": "^7.32.0",
+        "eslint-plugin-import": "^2.25.1",
+        "typescript": "^4.4.4",
+        "electron-reload": "^2.0.0-alpha.1",
+        "concurrently": "^6.3.0"
+    },
+    "dependencies": {
+        "electron-squirrel-startup": "^1.0.0"
+    }
+}
