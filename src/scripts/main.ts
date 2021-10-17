@@ -1,5 +1,5 @@
 const API_URL: string = "https://drednot.io/api/";
-const tableBody = <HTMLTableElement> document.getElementById("tableBody");
+const tableBody = <HTMLTableElement>document.getElementById("tableBody");
 
 interface Ship {
     ship_name: string
@@ -28,7 +28,7 @@ function getShips() {
 
                 var row = tableBody.insertRow(-1);
 
-                for (let val of [ship_name, score, color, hex_code]){
+                for (let val of [ship_name, score, color, hex_code]) {
                     var cell = row.insertCell(-1);
                     cell.innerText = val;
                 }
